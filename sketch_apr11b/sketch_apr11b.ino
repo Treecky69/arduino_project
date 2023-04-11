@@ -45,10 +45,6 @@ void loop() {
     if(blueValue < 255){
       blueValue += 1;
     }
-
-    analogWrite(red,redValue);
-    analogWrite(blue, blueValue);
-    analogWrite(green,greenValue);
   }
   else if (temp > maxTemp){
     if (blueValue > 0){
@@ -60,10 +56,6 @@ void loop() {
     if(redValue < 255){
       redValue += 1;
     }
-
-    analogWrite(red,redValue);
-    analogWrite(blue, blueValue);
-    analogWrite(green,greenValue);
   }
   else{
     if (redValue > 0){
@@ -75,11 +67,11 @@ void loop() {
     if(greenValue < 255){
       greenValue += 1;
     }
-
-    analogWrite(red,redValue);
-    analogWrite(blue, blueValue);
-    analogWrite(green,greenValue);
   }
+
+  analogWrite(red,redValue);
+  analogWrite(blue, blueValue);
+  analogWrite(green,greenValue);
   
   Serial.print("temp: ");
   Serial.println(temp);
